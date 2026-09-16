@@ -1,4 +1,4 @@
-/* The résumé content lives in resume.html; JavaScript only handles these controls. */
+/* Each résumé is editable HTML; localized button feedback comes from its data attributes. */
 (() => {
   function initializeResume() {
     const printButton = document.querySelector('[data-print]');
@@ -16,7 +16,7 @@
         try {
           if (!navigator.clipboard) throw new Error('Clipboard unavailable');
           await navigator.clipboard.writeText(id);
-          status.textContent = 'WeChat ID copied: ' + id;
+          status.textContent = wechatButton.dataset.copySuccess + id;
           wechatButton.dataset.copied = 'true';
           setTimeout(() => { delete wechatButton.dataset.copied; }, 1800);
         } catch {
@@ -25,7 +25,7 @@
           range.selectNodeContents(wechatButton);
           selection.removeAllRanges();
           selection.addRange(range);
-          status.textContent = 'WeChat ID selected. Copy ' + id + ' to add this contact.';
+          status.textContent = wechatButton.dataset.copyFallback + id;
         }
       });
     }

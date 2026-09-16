@@ -4,20 +4,22 @@ A compact, two-column résumé in charcoal, white and gold. The content is regul
 
 ## Open and edit
 
-Open `public/resume.html` directly in a browser. This standalone page requires no installation or internet connection. The hosted page uses the same HTML and CSS.
+Open `public/resume.html` directly in a browser. The English, Uzbek (Latin script), and Simplified Chinese pages share the same styling and link to one another. These standalone pages require no installation or internet connection.
 
 - **Content and contact details:** `public/resume.html`.
+- **Uzbek content:** `public/resume-uz.html`.
+- **Simplified Chinese content:** `public/resume-zh.html`.
 - **Colors, typography, responsive layout and print rules:** `public/styles.css`.
 - **Print and WeChat copy controls:** `public/script.js`.
 - **Portrait:** find the `PHOTO` comment in `public/resume.html`. Change the empty `src=""` on the `profile-photo` image to a relative path, such as `./images/portrait.jpg`, and put that image in `public/images/`. The initials placeholder hides automatically. Use an approximately 4:5 portrait; `object-fit: cover` crops the image to its frame.
 
-All personal text is written directly in the HTML. Update both occurrences of “7 years” as needed. No university, employers, certificates, dates of education, or other unprovided credentials have been added.
+All personal text is written directly in the HTML. Keep personal information, the portrait path, and years of experience consistent across the three language files when editing. No university, employers, certificates, dates of education, or other unprovided credentials have been added.
 
 ## Print or save a PDF
 
 Select **Print / Save as PDF**. Choose A4, portrait, 100% scale, no margins, and turn off browser headers and footers. Enable background graphics if your browser overrides the page’s color-preservation setting. The controls and screen background are removed by print CSS. Content has internal safe spacing. Phones reflow the document for readability; printing always restores the A4 two-column layout.
 
-`output/pdf/Akhmedov-Merojiddin-CV.pdf` is the supplied PDF snapshot. Regenerate it after editing the HTML or replacing the portrait.
+The supplied PDF snapshots are `output/pdf/Akhmedov-Merojiddin-CV.pdf` (English), `output/pdf/Akhmedov-Merojiddin-CV-Uzbek.pdf`, and `output/pdf/Akhmedov-Merojiddin-CV-Chinese.pdf`. Regenerate the relevant PDF after editing its HTML or replacing the portrait. The language switcher and print controls are excluded from every printed version.
 
 The contact links use the China country code `+86` with the supplied mobile number. Telegram phone links depend on the recipient’s account and privacy settings. Click the WeChat ID to copy it; on browsers without clipboard access, the text is selected for manual copying.
 
