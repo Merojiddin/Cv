@@ -1,7 +1,7 @@
 /* EDITING GUIDE
    Personal content and the photo path: resume.html, resume-uz.html, resume-zh.html, resume-ru.html
    Colors, type, spacing, screen layout and A4 print layout: this file.
-   Each screen sheet is 210 × 297 mm. English uses two sheets; localized CVs use one.
+   Every language uses two 210 × 297 mm A4 sheets: profile and skills, then experience and education.
 */
 :root {
   --ink: #25303a;
@@ -41,8 +41,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 .profile-photo[src=""] { display: none; }
 .photo-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #d3d9dd; }
 .profile-photo:not([src=""]) + .photo-placeholder { display: none; }
-.monogram { margin-top: 14px; font-size: 47px; font-weight: 400; letter-spacing: -3px; line-height: 1; }
-.photo-caption { margin-top: 23px; color: #c1c9cf; font-size: 7px; letter-spacing: 2px; }
+.monogram { font-size: 47px; font-weight: 400; letter-spacing: -3px; line-height: 1; }
 .identity h1, .identity h2 { margin: 0; font-size: 20px; font-weight: 600; line-height: 1.3; letter-spacing: .15px; }
 .identity h1 span, .identity h2 span { display: block; }
 .chinese-name { margin: 10px 0 0; font-size: 17px; font-weight: 400; letter-spacing: 4px; color: #e0c17c; }
@@ -118,12 +117,6 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 .skills-list li > span { display: block; }
 .continuation-sidebar { display: flex; flex-direction: column; }
 .continuation-role { margin: 22px 0 0; font-size: 12px; line-height: 1.8; color: var(--sidebar-muted); }
-.sidebar .focus-section { margin-top: 52px; }
-.focus-list { margin: 0; padding: 0; list-style: none; font-size: 12px; line-height: 1.8; color: var(--sidebar-muted); }
-.focus-list li { padding: 13px 0; border-bottom: 1px solid #ffffff22; }
-.continuation-contact { margin-top: auto; padding-top: 36px; font-size: 11px; line-height: 1.8; color: var(--sidebar-muted); }
-.continuation-contact p { margin: 0 0 8px; }
-.continuation-contact a { color: var(--sidebar-text); }
 .continuation-header { padding-bottom: 22px; border-bottom: 1px solid var(--line); }
 .continuation-header .eyebrow { margin-bottom: 10px; }
 .continuation-heading { margin: 0; font-size: 26px; line-height: 1.35; font-weight: 600; }
@@ -147,22 +140,9 @@ html:lang(zh-CN) .experience-list li { margin-bottom: 22px; }
 html:lang(zh-CN) .section-heading, html:lang(zh-CN) .sidebar-heading { font-size: 11px; }
 html:lang(zh-CN) .main-content .skills-list li { font-size: 13px; }
 
-/* The supplied localized copy fits a single A4 sheet with a simple role heading. */
-.resume-simple .professional-header .professional-title { min-height: 0; font-size: 34px; line-height: 1.2; }
-.resume-simple .language-list > div { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 11px; }
-.resume-simple .language-list > div:last-child { margin-bottom: 0; }
-.resume-simple .language-list dd { margin: 0; }
-.resume-simple .sidebar-section { margin-top: 26px; }
-.resume-simple .sidebar .skills-list li { font-size: 11px; line-height: 1.65; margin-bottom: 9px; }
-.resume-simple .sidebar-end { margin-top: 22px; }
-.resume-simple .highlights { margin-top: 23px; padding-top: 15px; padding-bottom: 16px; }
-.resume-simple .main-section { margin-top: 25px; }
-.resume-simple .section-heading { margin-bottom: 13px; }
-.resume-simple .experience-list { margin-top: 16px; }
-.resume-simple .experience-list li { margin-bottom: 12px; line-height: 1.7; }
-.resume-simple .experience-list li:last-child { margin-bottom: 0; }
-.resume-simple .degree-institution { margin-top: 7px; }
-.resume-simple .resume-footer { padding-top: 20px; }
+/* One shared two-page layout, with the original comfortable type and spacing. */
+.resume-two-page .professional-header .professional-title { min-height: 0; font-size: 34px; line-height: 1.2; }
+.continuation-sidebar .identity h2 { font-size: 18px; }
 
 @media screen and (max-width: 850px) and (min-width: 621px) {
   body { padding: 22px 16px; }
@@ -191,7 +171,6 @@ html:lang(zh-CN) .main-content .skills-list li { font-size: 13px; }
   .sidebar::before { top: 27px; height: 25px; width: 6px; }
   .portrait { grid-column: 1; height: 154px; width: 126px; max-width: 100%; margin: 0; }
   .monogram { font-size: 38px; }
-  .photo-caption { font-size: 6px; letter-spacing: 1.3px; }
   .identity { grid-column: 2; align-self: center; }
   .identity h1, .identity h2 { font-size: clamp(15px, 4.3vw, 21px); overflow-wrap: anywhere; }
   .chinese-name { font-size: 17px; }
@@ -212,9 +191,6 @@ html:lang(zh-CN) .main-content .skills-list li { font-size: 13px; }
   .main-content .skills-list li { font-size: 12px; }
   .continuation-sidebar { display: block; }
   .continuation-sidebar .identity { max-width: 240px; }
-  .sidebar .focus-section { margin-top: 28px; }
-  .focus-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
-  .continuation-contact { padding-top: 26px; }
   .sidebar-end { display: none; }
   .main-content { padding: 30px 25px 26px; }
   .main-content::before { right: 25px; }
@@ -235,9 +211,7 @@ html:lang(zh-CN) .main-content .skills-list li { font-size: 13px; }
   html:lang(uz) .skills-list li { margin-bottom: 0; }
   html:lang(ru) .skills-list li { margin-bottom: 0; }
   html:lang(zh-CN) .skills-list li { margin-bottom: 0; }
-  .resume-simple .professional-header .professional-title { font-size: 29px; }
-  .resume-simple .sidebar-section { margin-top: 0; }
-  .resume-simple .sidebar .skills-list li { margin-bottom: 0; }
+  .resume-two-page .professional-header .professional-title { font-size: 29px; }
 }
 
 @page { size: A4 portrait; margin: 0; }
@@ -248,7 +222,8 @@ html:lang(zh-CN) .main-content .skills-list li { font-size: 13px; }
   .resume { display: grid; grid-template-columns: 29% 71%; width: 210mm; height: 297mm; min-height: 297mm; margin: 0; box-shadow: none; break-inside: avoid; }
   .resume + .resume { margin-top: 0; break-before: page; }
   .sidebar, .main-content { break-inside: avoid; }
-  .main-section, .sidebar-section, .experience-list li { break-inside: avoid; }
+  .main-section, .sidebar-section, .skills-list li, .experience-list li { break-inside: avoid; }
+  .section-heading, .sidebar-heading, .job-title { break-after: avoid; }
   a { text-decoration: none; }
   .wechat-copy { cursor: default; }
   .wechat-copy::after { display: none; }

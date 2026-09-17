@@ -1,12 +1,12 @@
 # Akhmedov Merojiddin — CV
 
-A two-column résumé in charcoal, white and gold. The English version uses two pages; the concise Uzbek, Russian and Chinese versions each fit one A4 page, with the supplied native-language copy and a simple translator heading. The content is regular HTML, with separate CSS and minimal JavaScript.
+A two-column résumé in charcoal, white and gold. The English, Uzbek, Russian and Chinese versions share a two-page A4 structure, with the supplied natural-language copy and a simple translator heading. The content is regular HTML, with separate CSS and minimal JavaScript.
 
 ## Open and edit
 
 Open `public/resume.html` directly in a browser. The English, Uzbek (Latin script), Simplified Chinese, and Russian pages share the same styling and link to one another. These standalone pages require no installation or internet connection.
 
-- **Content and contact details:** `public/resume.html`.
+- **English content and contact details:** `public/resume.html`.
 - **Uzbek content:** `public/resume-uz.html`.
 - **Simplified Chinese content:** `public/resume-zh.html`.
 - **Russian content:** `public/resume-ru.html`.
@@ -14,11 +14,11 @@ Open `public/resume.html` directly in a browser. The English, Uzbek (Latin scrip
 - **Print and WeChat copy controls:** `public/script.js`.
 - **Portrait:** all four language pages use `public/me.JPEG`. To replace the photo, replace that file or change each `profile-photo` image path. Filename capitalization must match exactly. `object-fit: cover` crops the image to its frame.
 
-All personal text is written directly in the HTML. Keep personal information, the portrait path, and years of experience consistent across the four language files when editing. Education is the supplied Bachelor's Degree in International Commerce at Yangzhou University, Yangzhou, China, 2017–2021. All experience and qualifications come from the supplied CV content.
+All personal text is written directly in the HTML. Keep personal information, the portrait path, and years of experience consistent across the four language files when editing. Residence in China began in 2017; professional translation work began in 2019. The headline statistic refers to 7+ years of professional experience, not years in China. Education is the supplied Bachelor's Degree in International Commerce at Yangzhou University, Yangzhou, China, 2017–2021. All experience and qualifications come from the supplied CV content.
 
 ## Print or save a PDF
 
-Select **Print / Save as PDF**. Choose A4, portrait, 100% scale, no margins, and turn off browser headers and footers. Enable background graphics if your browser overrides the page’s color-preservation setting. The controls and screen background are removed by print CSS. Content has internal safe spacing. Phones reflow the document for readability; printing restores each language’s A4 layout with page numbers: two pages in English and one page in Uzbek, Russian and Chinese.
+Select **Print / Save as PDF**. Choose A4, portrait, 100% scale, no margins, and turn off browser headers and footers. Enable background graphics if your browser overrides the page’s color-preservation setting. The controls and screen background are removed by print CSS. Content has internal safe spacing. Phones reflow the document for readability; printing restores the same two-page A4 layout in every language, with page numbers 01 / 02 and 02 / 02. Page 1 contains the portrait, contact details, languages, profile and skills. Page 2 uses a small continuation header followed by experience and education; it does not repeat the contact, profile or skills sections.
 
 The supplied PDF snapshots are `output/pdf/Akhmedov-Merojiddin-CV.pdf` (English), `output/pdf/Akhmedov-Merojiddin-CV-Uzbek.pdf`, `output/pdf/Akhmedov-Merojiddin-CV-Chinese.pdf`, and `output/pdf/Akhmedov-Merojiddin-CV-Russian.pdf`. Regenerate the relevant PDF after editing its HTML or replacing the portrait. The language switcher and print controls are excluded from every printed version.
 

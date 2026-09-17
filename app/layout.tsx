@@ -3,7 +3,7 @@ import { headers } from "next/headers";
 import "./globals.css";
 
 const title = "Akhmedov Merojiddin | Translator";
-const description = "Akhmedov Merojiddin — translator with over 7 years of experience living and working in China. Fluent in Uzbek, Chinese, Russian and English. Based in Yiwu, Zhejiang.";
+const description = "Akhmedov Merojiddin — translator based in China since 2017, with over 7 years of professional experience. Fluent in Uzbek, Chinese, Russian and English. Based in Yiwu, Zhejiang, China.";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
