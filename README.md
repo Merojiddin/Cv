@@ -1,6 +1,6 @@
 # Akhmedov Merojiddin — CV
 
-A compact, two-column résumé in charcoal, white and gold. The content is regular HTML, with separate CSS and minimal JavaScript.
+A two-page, two-column résumé in charcoal, white and gold. Page one covers the profile, contact details, languages and core skills; page two covers professional experience, education and professional focus. The content is regular HTML, with separate CSS and minimal JavaScript.
 
 ## Open and edit
 
@@ -14,15 +14,19 @@ Open `public/resume.html` directly in a browser. The English, Uzbek (Latin scrip
 - **Print and WeChat copy controls:** `public/script.js`.
 - **Portrait:** all four language pages use `public/me.JPEG`. To replace the photo, replace that file or change each `profile-photo` image path. Filename capitalization must match exactly. `object-fit: cover` crops the image to its frame.
 
-All personal text is written directly in the HTML. Keep personal information, the portrait path, and years of experience consistent across the four language files when editing. No university, employers, certificates, dates of education, or other unprovided credentials have been added.
+All personal text is written directly in the HTML. Keep personal information, the portrait path, and years of experience consistent across the four language files when editing. Education is the supplied Bachelor's Degree in International Commerce at Yangzhou University, Yangzhou, China, 2017–2021. All experience and qualifications come from the supplied CV content.
 
 ## Print or save a PDF
 
-Select **Print / Save as PDF**. Choose A4, portrait, 100% scale, no margins, and turn off browser headers and footers. Enable background graphics if your browser overrides the page’s color-preservation setting. The controls and screen background are removed by print CSS. Content has internal safe spacing. Phones reflow the document for readability; printing always restores the A4 two-column layout.
+Select **Print / Save as PDF**. Choose A4, portrait, 100% scale, no margins, and turn off browser headers and footers. Enable background graphics if your browser overrides the page’s color-preservation setting. The controls and screen background are removed by print CSS. Content has internal safe spacing. Phones reflow the document for readability; printing always restores the two-page A4 layout with page numbers.
 
-The supplied PDF snapshots are `output/pdf/Akhmedov-Merojiddin-CV.pdf` (English), `output/pdf/Akhmedov-Merojiddin-CV-Uzbek.pdf`, and `output/pdf/Akhmedov-Merojiddin-CV-Chinese.pdf`. Regenerate the relevant PDF after editing its HTML or replacing the portrait. The language switcher and print controls are excluded from every printed version.
+The supplied PDF snapshots are `output/pdf/Akhmedov-Merojiddin-CV.pdf` (English), `output/pdf/Akhmedov-Merojiddin-CV-Uzbek.pdf`, `output/pdf/Akhmedov-Merojiddin-CV-Chinese.pdf`, and `output/pdf/Akhmedov-Merojiddin-CV-Russian.pdf`. Regenerate the relevant PDF after editing its HTML or replacing the portrait. The language switcher and print controls are excluded from every printed version.
 
 The contact links use the China country code `+86` with the supplied mobile number. Telegram phone links depend on the recipient’s account and privacy settings. Click the WeChat ID to copy it; on browsers without clipboard access, the text is selected for manual copying.
+
+## Previous version
+
+Commit `682dfef` (`Version 1`) preserves the complete CV before the expanded content and two-page update. To inspect that version without disturbing current work, run `git worktree add ../CV-Version-1 682dfef` and open its `public/resume.html`.
 
 ## Hosted development
 

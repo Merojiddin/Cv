@@ -1,7 +1,7 @@
 /* EDITING GUIDE
    Personal content and the photo path: resume.html, resume-uz.html, resume-zh.html, resume-ru.html
    Colors, type, spacing, screen layout and A4 print layout: this file.
-   The screen sheet is 210 × 297 mm. Print rules keep those dimensions.
+   Each screen sheet is 210 × 297 mm. Print rules preserve the two-page layout.
 */
 :root {
   --ink: #25303a;
@@ -31,7 +31,9 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 .paper-label { color: #878d90; font-size: 8px; letter-spacing: 1px; font-weight: 400; }
 .print-button { display: flex; justify-content: center; align-items: center; gap: 9px; min-height: 39px; padding: 9px 14px; border: 1px solid #cbd0d1; background: #f8f8f6; color: var(--ink); border-radius: 3px; font-size: 11px; font-weight: 600; cursor: pointer; }
 .print-button:hover { background: white; border-color: #aeb6bc; }
-.resume { position: relative; display: grid; grid-template-columns: 29% 71%; width: 210mm; height: 297mm; min-height: 297mm; margin: 0 auto; background: var(--paper); box-shadow: 0 3px 18px #25303a0d; }
+.resume-document { margin: 0 auto; }
+.resume { position: relative; display: grid; grid-template-columns: 29% 71%; width: 210mm; min-height: 297mm; margin: 0 auto; background: var(--paper); box-shadow: 0 3px 18px #25303a0d; }
+.resume + .resume { margin-top: 24px; }
 .sidebar { position: relative; padding: 39px 26px 29px; color: var(--sidebar-text); background: var(--ink); }
 .sidebar::before { content: ""; position: absolute; width: 10px; height: 31px; top: 39px; left: 0; background: var(--gold); }
 .portrait { position: relative; width: 100%; height: 199px; margin: 0 0 23px; overflow: hidden; background: #35414c; border: 1px solid #ffffff26; }
@@ -41,8 +43,8 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 .profile-photo:not([src=""]) + .photo-placeholder { display: none; }
 .monogram { margin-top: 14px; font-size: 47px; font-weight: 400; letter-spacing: -3px; line-height: 1; }
 .photo-caption { margin-top: 23px; color: #c1c9cf; font-size: 7px; letter-spacing: 2px; }
-.identity h1 { margin: 0; font-size: 20px; font-weight: 600; line-height: 1.3; letter-spacing: .15px; }
-.identity h1 span { display: block; }
+.identity h1, .identity h2 { margin: 0; font-size: 20px; font-weight: 600; line-height: 1.3; letter-spacing: .15px; }
+.identity h1 span, .identity h2 span { display: block; }
 .chinese-name { margin: 10px 0 0; font-size: 17px; font-weight: 400; letter-spacing: 4px; color: #e0c17c; }
 .sidebar-section { margin-top: 29px; }
 .sidebar-heading { display: flex; align-items: center; justify-content: space-between; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid #ffffff35; text-transform: uppercase; font-size: 10px; font-weight: 700; letter-spacing: 1.65px; }
@@ -60,10 +62,11 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 .language-section { margin-top: 31px; }
 .language-count { font-size: 12px; line-height: 1; letter-spacing: 0; font-weight: 400; color: #e0c17c; }
 .language-list { margin: 0; }
-.language-list > div { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; gap: 8px; }
+.language-list > div { display: block; margin-bottom: 17px; }
 .language-list > div:last-child { margin-bottom: 0; }
 .language-list dt { font-size: 12px; font-weight: 600; }
-.language-list dd { margin: 0; font-size: 10px; color: var(--sidebar-muted); }
+.language-list dd { margin: 5px 0 0; font-size: 11px; line-height: 1.6; color: var(--sidebar-muted); }
+.language-proficiency { display: block; }
 .skills-section { margin-top: 31px; }
 .skills-list { list-style: none; padding: 0; margin: 0; }
 .skills-list li { position: relative; padding-left: 11px; margin-bottom: 9px; font-size: 10px; line-height: 1.5; color: #e1e6e9; }
@@ -73,9 +76,9 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 .main-content { position: relative; display: flex; flex-direction: column; padding: 45px 37px 28px 38px; min-width: 0; }
 .main-content::before { content: ""; position: absolute; top: 0; right: 37px; width: 13px; height: 10px; background: var(--gold); }
 .eyebrow { margin: 0 0 19px; font-size: 8px; font-weight: 600; letter-spacing: 1.65px; line-height: 1.5; color: #737e86; }
-.professional-title { margin: 0; text-transform: uppercase; font-size: 29px; font-weight: 700; line-height: 1.23; letter-spacing: -.65px; }
+.professional-title { margin: 0; text-transform: uppercase; font-size: 27px; font-weight: 700; line-height: 1.25; letter-spacing: -.65px; }
 .title-amp { font-weight: 400; color: #7b858d; }
-.title-accent { color: #967326; font-size: 26px; letter-spacing: -.65px; }
+.title-accent { color: #967326; font-size: 25px; letter-spacing: -.65px; }
 .header-location { display: flex; align-items: center; gap: 7px; margin: 15px 0 0; font-size: 10px; color: #6b757e; }
 .header-location > span { display: block; width: 4px; height: 4px; background: var(--gold); }
 .highlights { display: grid; grid-template-columns: .94fr 1.06fr; margin: 26px 0 0; padding: 17px 0 18px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -83,12 +86,13 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 .highlight + .highlight { border-left: 1px solid var(--line); padding-left: 23px; }
 .highlight strong { display: flex; align-items: baseline; gap: 8px; font-size: 33px; font-weight: 500; line-height: 1; letter-spacing: -1px; }
 .highlight-unit { font-size: 12px; font-weight: 600; letter-spacing: 0; }
-.highlight-label { margin-top: 8px; color: #737d86; font-size: 8px; line-height: 1.5; white-space: nowrap; }
+.highlight-label { margin-top: 8px; color: #737d86; font-size: 9px; line-height: 1.5; }
 .main-section { margin-top: 29px; }
 .section-heading { display: flex; align-items: center; gap: 9px; margin: 0 0 16px; font-size: 10px; text-transform: uppercase; line-height: 1.4; font-weight: 700; letter-spacing: 1.5px; }
 .section-heading::before { content: ""; display: block; flex: 0 0 3px; width: 3px; height: 12px; background: var(--gold); }
 .section-heading::after { content: ""; flex: 1 1 auto; height: 1px; margin-left: 3px; background: var(--line); }
-.summary-section > p { margin: 0; color: var(--body-ink); font-size: 11.5px; line-height: 1.8; }
+.summary-section > p { margin: 0; color: var(--body-ink); font-size: 13px; line-height: 1.75; }
+.summary-section > p + p { margin-top: 12px; }
 .summary-section strong { color: var(--ink); font-weight: 600; }
 .experience-section { margin-top: 32px; }
 .experience-meta { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 1px 0 11px; font-size: 9px; color: #737e86; }
@@ -97,13 +101,34 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 .job-title { margin: 0; font-size: 17px; font-weight: 600; letter-spacing: -.1px; line-height: 1.4; }
 .job-location { margin: 7px 0 0; font-size: 10px; color: var(--muted); }
 .experience-list { list-style: none; padding: 0; margin: 19px 0 0; }
-.experience-list li { position: relative; margin: 0 0 14px; padding-left: 14px; color: var(--body-ink); font-size: 11.5px; line-height: 1.7; }
+.experience-list li { position: relative; margin: 0 0 17px; padding-left: 14px; color: var(--body-ink); font-size: 13px; line-height: 1.75; }
 .experience-list li:last-child { margin-bottom: 0; }
 .experience-list li::before { content: ""; position: absolute; top: 7px; left: 0; width: 3px; height: 3px; background: var(--gold); }
 .experience-list strong { font-weight: 600; color: var(--ink); }
 .education-section { margin-top: 32px; }
 .degree-title { margin: 0; font-size: 14px; line-height: 1.5; font-weight: 600; }
 .degree-subject { margin: 4px 0 0; font-size: 11.5px; line-height: 1.7; color: var(--body-ink); }
+.degree-institution { margin: 10px 0 0; font-size: 13px; font-weight: 600; line-height: 1.6; }
+.degree-meta { margin: 5px 0 0; font-size: 12px; color: var(--body-ink); line-height: 1.6; }
+.main-content > .skills-section { margin-top: 29px; }
+.main-content .skills-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; row-gap: 21px; }
+.main-content .skills-list li { padding: 12px 0 0; margin: 0; border-top: 1px solid var(--line); color: var(--body-ink); font-size: 12px; line-height: 1.7; }
+.main-content .skills-list li::before { display: none; }
+.skills-list strong { display: block; margin-bottom: 5px; font-size: 13px; font-weight: 600; line-height: 1.5; color: var(--ink); }
+.skills-list li > span { display: block; }
+.continuation-sidebar { display: flex; flex-direction: column; }
+.continuation-role { margin: 22px 0 0; font-size: 12px; line-height: 1.8; color: var(--sidebar-muted); }
+.sidebar .focus-section { margin-top: 52px; }
+.focus-list { margin: 0; padding: 0; list-style: none; font-size: 12px; line-height: 1.8; color: var(--sidebar-muted); }
+.focus-list li { padding: 13px 0; border-bottom: 1px solid #ffffff22; }
+.continuation-contact { margin-top: auto; padding-top: 36px; font-size: 11px; line-height: 1.8; color: var(--sidebar-muted); }
+.continuation-contact p { margin: 0 0 8px; }
+.continuation-contact a { color: var(--sidebar-text); }
+.continuation-header { padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+.continuation-header .eyebrow { margin-bottom: 10px; }
+.continuation-heading { margin: 0; font-size: 26px; line-height: 1.35; font-weight: 600; }
+.resume-continuation .experience-section { margin-top: 24px; }
+.page-number { flex-shrink: 0; color: #86651f; font-size: 9px; letter-spacing: 1px; }
 .resume-footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: auto; padding-top: 28px; font-size: 6.5px; line-height: 1.5; letter-spacing: 1.1px; color: #7b848c; }
 .footer-square { display: block; flex: 0 0 7px; height: 7px; background: var(--gold); }
 .print-hint { margin: 19px 0 0; color: #7d8589; font-size: 10px; text-align: center; }
@@ -117,10 +142,10 @@ html:lang(ru) .skills-list li { margin-bottom: 8px; }
 html:lang(zh-CN) body { font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; }
 html:lang(zh-CN) .professional-title { min-height: 107px; line-height: 1.6; letter-spacing: 1px; }
 html:lang(zh-CN) .title-accent { letter-spacing: 1px; }
-html:lang(zh-CN) .summary-section > p, html:lang(zh-CN) .experience-list li { font-size: 13px; line-height: 1.95; }
-html:lang(zh-CN) .experience-list li { margin-bottom: 18px; }
+html:lang(zh-CN) .summary-section > p, html:lang(zh-CN) .experience-list li { font-size: 14px; line-height: 1.95; }
+html:lang(zh-CN) .experience-list li { margin-bottom: 22px; }
 html:lang(zh-CN) .section-heading, html:lang(zh-CN) .sidebar-heading { font-size: 11px; }
-html:lang(zh-CN) .skills-list li { font-size: 11px; margin-bottom: 10px; }
+html:lang(zh-CN) .main-content .skills-list li { font-size: 13px; }
 
 @media screen and (max-width: 850px) and (min-width: 621px) {
   body { padding: 22px 16px; }
@@ -131,7 +156,7 @@ html:lang(zh-CN) .skills-list li { font-size: 11px; margin-bottom: 10px; }
   .title-accent { font-size: 23px; }
   .highlight + .highlight { padding-left: 15px; }
   .highlight-label { font-size: 7px; white-space: normal; }
-  .identity h1 { font-size: 17px; }
+  .identity h1, .identity h2 { font-size: 17px; }
   .portrait { height: 180px; }
   .paper-label { display: none; }
 }
@@ -151,7 +176,7 @@ html:lang(zh-CN) .skills-list li { font-size: 11px; margin-bottom: 10px; }
   .monogram { font-size: 38px; }
   .photo-caption { font-size: 6px; letter-spacing: 1.3px; }
   .identity { grid-column: 2; align-self: center; }
-  .identity h1 { font-size: clamp(15px, 4.3vw, 21px); overflow-wrap: anywhere; }
+  .identity h1, .identity h2 { font-size: clamp(15px, 4.3vw, 21px); overflow-wrap: anywhere; }
   .chinese-name { font-size: 17px; }
   .sidebar-section { margin-top: 0; min-width: 0; }
   .sidebar-heading { font-size: 9px; letter-spacing: 1.2px; margin-bottom: 15px; }
@@ -166,6 +191,13 @@ html:lang(zh-CN) .skills-list li { font-size: 11px; margin-bottom: 10px; }
   .skills-section { grid-column: 1 / -1; }
   .skills-list { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 9px 14px; }
   .skills-list li { margin-bottom: 0; font-size: 10px; }
+  .main-content .skills-list { gap: 20px; }
+  .main-content .skills-list li { font-size: 12px; }
+  .continuation-sidebar { display: block; }
+  .continuation-sidebar .identity { max-width: 240px; }
+  .sidebar .focus-section { margin-top: 28px; }
+  .focus-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+  .continuation-contact { padding-top: 26px; }
   .sidebar-end { display: none; }
   .main-content { padding: 30px 25px 26px; }
   .main-content::before { right: 25px; }
@@ -193,7 +225,8 @@ html:lang(zh-CN) .skills-list li { font-size: 11px; margin-bottom: 10px; }
   html, body { width: 210mm; margin: 0 !important; padding: 0 !important; background: #fff; }
   body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .document-toolbar, .print-hint, [data-copy-status] { display: none !important; }
-  .resume { display: grid; grid-template-columns: 29% 71%; width: 210mm; min-height: 297mm; margin: 0; box-shadow: none; }
+  .resume { display: grid; grid-template-columns: 29% 71%; width: 210mm; height: 297mm; min-height: 297mm; margin: 0; box-shadow: none; break-inside: avoid; }
+  .resume + .resume { margin-top: 0; break-before: page; }
   .sidebar, .main-content { break-inside: avoid; }
   .main-section, .sidebar-section, .experience-list li { break-inside: avoid; }
   a { text-decoration: none; }

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
 
-const title = "Akhmedov Merojiddin | Translator & Sourcing Specialist";
-const description = "Multilingual translator and sourcing specialist in Yiwu, China. Four languages and seven years of experience in sourcing, factory interpretation, and purchasing.";
+const title = "Akhmedov Merojiddin | Multilingual Translator & China Sourcing Specialist";
+const description = "Multilingual translator and China sourcing specialist in Yiwu, Zhejiang, with 7+ years of experience in China. Uzbek, Chinese, Russian and English interpretation, sourcing, supplier negotiation and purchasing.";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
