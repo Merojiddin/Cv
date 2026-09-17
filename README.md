@@ -1,6 +1,6 @@
 # Akhmedov Merojiddin — CV
 
-A two-page, two-column résumé in charcoal, white and gold. Page one covers the profile, contact details, languages and core skills; page two covers professional experience, education and professional focus. The content is regular HTML, with separate CSS and minimal JavaScript.
+A two-column résumé in charcoal, white and gold. The English version uses two pages; the concise Uzbek, Russian and Chinese versions each fit one A4 page, with the supplied native-language copy and a simple translator heading. The content is regular HTML, with separate CSS and minimal JavaScript.
 
 ## Open and edit
 
@@ -18,7 +18,7 @@ All personal text is written directly in the HTML. Keep personal information, th
 
 ## Print or save a PDF
 
-Select **Print / Save as PDF**. Choose A4, portrait, 100% scale, no margins, and turn off browser headers and footers. Enable background graphics if your browser overrides the page’s color-preservation setting. The controls and screen background are removed by print CSS. Content has internal safe spacing. Phones reflow the document for readability; printing always restores the two-page A4 layout with page numbers.
+Select **Print / Save as PDF**. Choose A4, portrait, 100% scale, no margins, and turn off browser headers and footers. Enable background graphics if your browser overrides the page’s color-preservation setting. The controls and screen background are removed by print CSS. Content has internal safe spacing. Phones reflow the document for readability; printing restores each language’s A4 layout with page numbers: two pages in English and one page in Uzbek, Russian and Chinese.
 
 The supplied PDF snapshots are `output/pdf/Akhmedov-Merojiddin-CV.pdf` (English), `output/pdf/Akhmedov-Merojiddin-CV-Uzbek.pdf`, `output/pdf/Akhmedov-Merojiddin-CV-Chinese.pdf`, and `output/pdf/Akhmedov-Merojiddin-CV-Russian.pdf`. Regenerate the relevant PDF after editing its HTML or replacing the portrait. The language switcher and print controls are excluded from every printed version.
 

@@ -1,7 +1,7 @@
 /* EDITING GUIDE
    Personal content and the photo path: resume.html, resume-uz.html, resume-zh.html, resume-ru.html
    Colors, type, spacing, screen layout and A4 print layout: this file.
-   Each screen sheet is 210 × 297 mm. Print rules preserve the two-page layout.
+   Each screen sheet is 210 × 297 mm. English uses two sheets; localized CVs use one.
 */
 :root {
   --ink: #25303a;
@@ -147,6 +147,23 @@ html:lang(zh-CN) .experience-list li { margin-bottom: 22px; }
 html:lang(zh-CN) .section-heading, html:lang(zh-CN) .sidebar-heading { font-size: 11px; }
 html:lang(zh-CN) .main-content .skills-list li { font-size: 13px; }
 
+/* The supplied localized copy fits a single A4 sheet with a simple role heading. */
+.resume-simple .professional-header .professional-title { min-height: 0; font-size: 34px; line-height: 1.2; }
+.resume-simple .language-list > div { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 11px; }
+.resume-simple .language-list > div:last-child { margin-bottom: 0; }
+.resume-simple .language-list dd { margin: 0; }
+.resume-simple .sidebar-section { margin-top: 26px; }
+.resume-simple .sidebar .skills-list li { font-size: 11px; line-height: 1.65; margin-bottom: 9px; }
+.resume-simple .sidebar-end { margin-top: 22px; }
+.resume-simple .highlights { margin-top: 23px; padding-top: 15px; padding-bottom: 16px; }
+.resume-simple .main-section { margin-top: 25px; }
+.resume-simple .section-heading { margin-bottom: 13px; }
+.resume-simple .experience-list { margin-top: 16px; }
+.resume-simple .experience-list li { margin-bottom: 12px; line-height: 1.7; }
+.resume-simple .experience-list li:last-child { margin-bottom: 0; }
+.resume-simple .degree-institution { margin-top: 7px; }
+.resume-simple .resume-footer { padding-top: 20px; }
+
 @media screen and (max-width: 850px) and (min-width: 621px) {
   body { padding: 22px 16px; }
   .resume { width: 100%; height: auto; min-height: 297mm; grid-template-columns: 29% 71%; }
@@ -218,6 +235,9 @@ html:lang(zh-CN) .main-content .skills-list li { font-size: 13px; }
   html:lang(uz) .skills-list li { margin-bottom: 0; }
   html:lang(ru) .skills-list li { margin-bottom: 0; }
   html:lang(zh-CN) .skills-list li { margin-bottom: 0; }
+  .resume-simple .professional-header .professional-title { font-size: 29px; }
+  .resume-simple .sidebar-section { margin-top: 0; }
+  .resume-simple .sidebar .skills-list li { margin-bottom: 0; }
 }
 
 @page { size: A4 portrait; margin: 0; }
