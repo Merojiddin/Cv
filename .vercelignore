@@ -1,0 +1,4 @@
+# Publish only the static CV pages and their local assets.
+/*
+!public
+!vercel.json

@@ -15,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     icons: { icon: "/icons/message-circle.svg" },
     metadataBase: new URL(origin),
-    alternates: { languages: { en: "/resume.html", uz: "/resume-uz.html", "zh-CN": "/resume-zh.html" } },
+    alternates: { languages: { en: "/resume.html", uz: "/resume-uz.html", "zh-CN": "/resume-zh.html", ru: "/resume-ru.html" } },
     openGraph: { title, description, type: "profile", images: [{ url: `${origin}/og.png`, width: 1730, height: 909, alt: "Akhmedov Merojiddin — multilingual translator and sourcing specialist in Yiwu, China" }] },
     twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.png`] },
     robots: { index: false, follow: false },

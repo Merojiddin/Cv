@@ -4,16 +4,17 @@ A compact, two-column résumé in charcoal, white and gold. The content is regul
 
 ## Open and edit
 
-Open `public/resume.html` directly in a browser. The English, Uzbek (Latin script), and Simplified Chinese pages share the same styling and link to one another. These standalone pages require no installation or internet connection.
+Open `public/resume.html` directly in a browser. The English, Uzbek (Latin script), Simplified Chinese, and Russian pages share the same styling and link to one another. These standalone pages require no installation or internet connection.
 
 - **Content and contact details:** `public/resume.html`.
 - **Uzbek content:** `public/resume-uz.html`.
 - **Simplified Chinese content:** `public/resume-zh.html`.
+- **Russian content:** `public/resume-ru.html`.
 - **Colors, typography, responsive layout and print rules:** `public/styles.css`.
 - **Print and WeChat copy controls:** `public/script.js`.
-- **Portrait:** find the `PHOTO` comment in `public/resume.html`. Change the empty `src=""` on the `profile-photo` image to a relative path, such as `./images/portrait.jpg`, and put that image in `public/images/`. The initials placeholder hides automatically. Use an approximately 4:5 portrait; `object-fit: cover` crops the image to its frame.
+- **Portrait:** all four language pages use `public/me.JPEG`. To replace the photo, replace that file or change each `profile-photo` image path. Filename capitalization must match exactly. `object-fit: cover` crops the image to its frame.
 
-All personal text is written directly in the HTML. Keep personal information, the portrait path, and years of experience consistent across the three language files when editing. No university, employers, certificates, dates of education, or other unprovided credentials have been added.
+All personal text is written directly in the HTML. Keep personal information, the portrait path, and years of experience consistent across the four language files when editing. No university, employers, certificates, dates of education, or other unprovided credentials have been added.
 
 ## Print or save a PDF
 
@@ -34,3 +35,9 @@ npm run build
 ```
 
 Lucide icons are included locally under `public/icons/`, with their license. The social preview is `public/og.png`.
+
+## Vercel deployment
+
+`vercel.json` publishes the existing `public/` directory as a static site, with no dependency installation or build step. The root URL serves `resume.html`; the Uzbek, Chinese, and Russian pages remain available through the language switcher. The vinext wrapper is not needed by Vercel.
+
+Use the Vercel project name `merojiddin`. Deploy from the repository root with `npx vercel --prod` after signing in. Vercel supplies a `.vercel.app` address; the precise name depends on availability. Keep the project on the free Hobby plan if creating a new account.

@@ -1,5 +1,5 @@
 /* EDITING GUIDE
-   Personal content and the photo path: resume.html, resume-uz.html, resume-zh.html
+   Personal content and the photo path: resume.html, resume-uz.html, resume-zh.html, resume-ru.html
    Colors, type, spacing, screen layout and A4 print layout: this file.
    The screen sheet is 210 × 297 mm. Print rules keep those dimensions.
 */
@@ -112,6 +112,8 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 /* Respect each language's natural line lengths without changing the A4 grid. */
 html:lang(uz) .highlight-label { white-space: normal; }
 html:lang(uz) .skills-list li { margin-bottom: 8px; }
+html:lang(ru) .highlight-label { white-space: normal; }
+html:lang(ru) .skills-list li { margin-bottom: 8px; }
 html:lang(zh-CN) body { font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; }
 html:lang(zh-CN) .professional-title { min-height: 107px; line-height: 1.6; letter-spacing: 1px; }
 html:lang(zh-CN) .title-accent { letter-spacing: 1px; }
@@ -138,7 +140,7 @@ html:lang(zh-CN) .skills-list li { font-size: 11px; margin-bottom: 10px; }
   body { padding: 16px 12px; }
   .document-toolbar { gap: 10px; margin-bottom: 14px; }
   .language-switcher { order: 1; flex-basis: 100%; justify-content: center; margin-left: 0; }
-  .language-switcher a { min-height: 42px; padding: 8px 16px; }
+  .language-switcher a { min-height: 42px; padding: 8px 11px; }
   .document-label { font-size: 8px; letter-spacing: 1px; gap: 7px; }
   .paper-label { display: none; }
   .print-button { min-height: 42px; padding: 9px 10px; font-size: 10px; gap: 7px; }
@@ -182,6 +184,7 @@ html:lang(zh-CN) .skills-list li { font-size: 11px; margin-bottom: 10px; }
   .resume-footer { margin-top: 10px; font-size: 5.5px; letter-spacing: .7px; }
   .print-hint { font-size: 9px; }
   html:lang(uz) .skills-list li { margin-bottom: 0; }
+  html:lang(ru) .skills-list li { margin-bottom: 0; }
   html:lang(zh-CN) .skills-list li { margin-bottom: 0; }
 }
 
